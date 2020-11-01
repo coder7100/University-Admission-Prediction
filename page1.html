@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    h2 {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    form {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+        display: table-row;
+
+
+    }
+
+    label {
+        display: table-cell;
+        padding-bottom: 20px;
+        padding-right: 100px;
+        cursor: pointer;
+
+    }
+
+    input {
+        display: table-cell;
+    }
+
+    .Buttons {
+        padding-left: 200px;
+    }
+</style>
+
+<head>
+    <title>Admission Predictor</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h2>Welcome to the Admission Predictor</h2>
+    <form action="/predict" method="post">
+        <ul>
+            <li>
+                <label for="GRE">Enter your GRE Score</label>
+                <input id="GRE" name="GRE">
+            </li>
+
+            <li>
+                <label for="TOEFL">Enter your TOEFL Score</label>
+                <input id="TOEFL" name="TOEFL">
+            </li>
+
+            <li>
+                <label for="University Rating">Enter your University Ranking</label>
+                <input id="University Rating" name="UR">
+            </li>
+
+            <li>
+                <label for="SOP">Enter your SOP Rating</label>
+                <input id="SOP" name="SOP">
+            </li>
+
+            <li>
+                <label for="LOR">Enter your LOR Rating</label>
+                <input id="LOR" name="LOR">
+            </li>
+
+            <li>
+                <label for="CGPA">Enter your CGPA</label>
+                <input id="CGPA" name="CGPA">
+            </li>
+
+            <div class="Buttons">
+                <li>
+                    <input id="button" type="submit" value="Predict">
+                </li>
+
+                <li>
+                    <br> {{pred}} <br>
+                </li>
+            </div>
+        </ul>
+
+    </form>
+
+</body>
+
+</html>
